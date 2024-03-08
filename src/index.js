@@ -2,18 +2,24 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css';
 
-const author='Abigail S.';
-const title = 'Bad Therapy: Why the Kids Arent Growing Up';
-const img =
-  'https://images-na.ssl-images-amazon.com/images/I/81RYRl7DvXL._AC_UL600_SR600,400_.jpg';
+const firstBook = {
+    author : 'Abigail S.',
+    title : 'Bad Therapy: Why the Kids Arent Growing Up',
+    img :
+    'https://images-na.ssl-images-amazon.com/images/I/81RYRl7DvXL._AC_UL600_SR600,400_.jpg',
+}
 
-
+const secondBook = {
+  author: 'Kristin Hannah',
+  title: 'The Women: a Novel',
+  img: 'https://images-na.ssl-images-amazon.com/images/I/913C+MR3S5L._AC_UL600_SR600,400_.jpg',
+}
 
 const Booklist = () => {
     return (
     <section className='booklist'>
-      <Book author={author} title = {title} img = {img}/>
-      <Book title= {title} author={author} img = {img}/>
+      <Book author={firstBook.author} title = {firstBook.title} img = {firstBook.img}/>
+      <Book title= {secondBook.title} author={secondBook.author} img = {secondBook.img}/>
     </section>
   )
 }

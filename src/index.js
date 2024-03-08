@@ -12,20 +12,19 @@ const img =
 const Booklist = () => {
     return (
     <section className='booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book author={author} title = {title} img = {img}/>
+      <Book title= {title} author={author} img = {img}/>
     </section>
   )
 }
 
-const Book = () => {
+const Book = (props) => {
+    console.log(props);
   return (
     <article className="book">
-      <img src= {img} alt={title}/>
-      <h2> {title} </h2>
-      <h4> {author.toUpperCase()} </h4>
+      <img src= {props.img} alt={props.title}/>
+      <p>{props.author}</p>
+      <p>{props.title} </p>
     </article>
   )
 };

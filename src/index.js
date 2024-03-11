@@ -22,13 +22,18 @@ const books = [
 // console.log(newBooks);
 
 const Booklist = () => {
+    const someValue = 'shakeAndBake'
+    const displayValue = () => {
+        console.log(someValue);
+    };
   return (
     <section className="booklist">
       <EventExamples />
       {books.map((book) => {
         const { img, title, author, id } = book
-        return <Book img={img} title={title} author={author} key={id}></Book>
-      })}
+        return <Book img={img} title={title} author={author} key={id}displayValue={displayValue} ></Book>
+    })}
+    {/* <SomeComponent someValue={someValue}/> */}
     </section>
   )
 }
@@ -67,12 +72,13 @@ const EventExamples = () => {
 }
 
 const Book = (props) => {
-  const { img, title, author } = props
+  const { img, title, author, displayValue } = props
   return (
     <article className="book">
       <img src={img} alt={title} />
       <p>{author}</p>
       <p>{title} </p>
+      <button onClick={displayValue}> click me </button>
     </article>
   )
 }

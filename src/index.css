@@ -35,7 +35,7 @@ body {
     object-fit: cover;
 }
 
-.book h4 {
+.book author {
     color: red;
     letter-spacing: 2px;
 }

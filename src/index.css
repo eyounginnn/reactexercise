@@ -35,7 +35,33 @@ body {
     object-fit: cover;
 }
 
+.book h4{
+    color: #617d98;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    letter-spacing: 2px;
+}
+
 .book author {
     color: red;
     letter-spacing: 2px;
+}
+.book p {
+    margin: 1rem 0 0.5rem;
+}
+.number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background: red;
+}
+
+h1{ 
+    text-align: center;
+    margin-top: 4rem;
+    text-transform: capitalize;
 }

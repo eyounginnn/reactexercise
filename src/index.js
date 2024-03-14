@@ -11,13 +11,17 @@ import Book from './Book';
 
 const Booklist = () => {
   return (
-    <section className="booklist">
+    <>
+    {/* ^ this is a shortcut to adding a parent <> </> */}
+        <h1> Amazon Best Sellers </h1>
+      <section className='booklist'>
       <EventExamples />
-      {books.map((book) => {
-        const { img, title, author, id } = book;
-        return <Book img={img} title={title} author={author} key={id} ></Book>
+      {books.map((book,index) => {
+        // const { img, title, author, id, index } = book;
+        return <Book {...book} key={book.id} number = {index}></Book>
     })}
     </section>
+    </>
   )
 }
 
